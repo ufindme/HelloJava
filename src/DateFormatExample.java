@@ -9,7 +9,7 @@ public class DateFormatExample {
         // Output: 15:30:45
         System.out.printf("%tT%n", date);
 
-        //c的使用
+        //c的使用 %n表示的是换行符
         System.out.printf("全部日期和时间信息：%tc%n",date);
         //f的使用
         System.out.printf("年-月-日格式：%tF%n",date);
