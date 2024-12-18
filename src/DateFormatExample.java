@@ -19,7 +19,7 @@ public class DateFormatExample {
         System.out.printf("HH:MM:SS PM格式（12时制）：%tr%n",date);
         //t的使用
         System.out.printf("HH:MM:SS格式（24时制）：%tT%n",date);
-        //R的使用src/Main.java
+        //R的使用src/MutiPerson.java
         System.out.printf("HH:MM格式（24时制）：%tR%n",date);
 
         // 使用toString()显示日期和时间
