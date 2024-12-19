@@ -23,6 +23,8 @@ public class ReflectionExample {
 
         // 调用方法
         Method greetMethod = clazz.getMethod("greet", String.class);
+
+        //等同于 ((Person) person).greet("World");
         greetMethod.invoke(person, "World");
     }
 }

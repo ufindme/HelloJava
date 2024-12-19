@@ -50,7 +50,7 @@ class Dept{
 
 public class JavaDemo {
 	public static void main(String[] arg){
-       Dept myDept = new Dept(1010,"IT部门","深圳");
+       Department myDept = new Department(1010,"IT部门","深圳");
        System.out.println(myDept.getInfo());
 	}
 }
