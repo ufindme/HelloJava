@@ -64,7 +64,7 @@ class Role{
 class Users{
     private long userId;
     private String userName;
-    private Role roles[];
+    private Role[] roles;
     
     public Users(){}
     public Users(long userId, String userName){
