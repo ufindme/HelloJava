@@ -15,7 +15,7 @@ class Person2{
     }
 }
 
-public class JavaExecOrder {
+public class ExecOrder {
 
     //静态代码块优先于主方法执行，可以用于程序加载的初始化。
     static{
