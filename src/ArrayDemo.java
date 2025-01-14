@@ -1,10 +1,21 @@
+import java.util.Arrays;
 public class ArrayDemo {
   public static void main(String[] args) {
-  	int[] array1 = new int[]{22,3,12,65,90,54,71,17,90,32,19,29,85,33};
-
-  	for (int i:array1){
-  		System.out.print(i + " ");
+  	String str = "want you to know one thing";
+	int countN = 0;
+	int countO = 0;
+	char[] charArray= str.toCharArray();
+  	for (char i:charArray){
+		if(i=='n'){
+			countN++;
+		}
+		if(i=='o'){
+			countO++;
+		}
   	}
+
+	System.out.println("Number of 'n' in the string: " + countN);
+	System.out.println("Number of 'o' in the string: " + countO);
   	
   }   
 }
