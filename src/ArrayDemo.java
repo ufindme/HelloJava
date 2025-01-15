@@ -36,14 +36,27 @@ class ArrayOrder extends Array{
 		super(size);
 	}
 
-	public void arrayOrder(){
+	public void arraysOrder(){
 		Arrays.sort(arr);
 	}
 }
+class ReverseArray extends Array{
+	public ReverseArray(int size){
+		super(size);
+	}
 
+	public void reverseArrays(){
+		int center = arr.length/2;
+		for(int i=0; i<center; i++){
+			int temp = arr[i];
+			arr[i] = arr[arr.length-i-1];
+			arr[arr.length-i-1] = temp;
+		}
+	}
+}
 public class ArrayDemo {
   public static void main(String[] args) {
-    ArrayOrder arr = new ArrayOrder(5);
+	  ReverseArray arr = new ReverseArray(5);
   	System.out.println(arr.insert(10));
 	System.out.println(arr.insert(20));
 	System.out.println(arr.insert(31));
@@ -52,7 +65,8 @@ public class ArrayDemo {
 	System.out.println(arr.insert(9));
 	System.out.println(arr.insert(18));
 	System.out.println(arr.insert(23));
-	arr.arrayOrder();
+	arr.display();
+	arr.reverseArrays();
 	arr.display();
   }   
 }
