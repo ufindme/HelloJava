@@ -31,9 +31,19 @@ class Array{
 	}
 }
 
+class ArrayOrder extends Array{
+    public ArrayOrder(int size){
+		super(size);
+	}
+
+	public void arrayOrder(){
+		Arrays.sort(arr);
+	}
+}
+
 public class ArrayDemo {
   public static void main(String[] args) {
-  	Array arr = new Array(5);
+    ArrayOrder arr = new ArrayOrder(5);
   	System.out.println(arr.insert(10));
 	System.out.println(arr.insert(20));
 	System.out.println(arr.insert(31));
@@ -42,6 +52,7 @@ public class ArrayDemo {
 	System.out.println(arr.insert(9));
 	System.out.println(arr.insert(18));
 	System.out.println(arr.insert(23));
+	arr.arrayOrder();
 	arr.display();
   }   
 }
