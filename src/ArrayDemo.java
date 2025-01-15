@@ -1,21 +1,47 @@
 import java.util.Arrays;
+class Array{
+	int[] arr;
+	int index = 0;
+	public Array(int size){
+		arr = new int[size];
+	}
+
+    //insert method to add element to the array
+	public boolean insert(int value){
+		if(index < arr.length){
+			arr[index] = value;
+			index++;
+			return true;
+		}else {
+			return false;
+		}
+	}
+
+	public void extend(int size){
+		int[] newArr = new int[arr.length + size];
+		for(int i=0; i<arr.length; i++){
+			newArr[i] = arr[i];
+		}
+		this.arr = newArr;
+	}
+
+	//display method to print the array
+	public void display(){
+		System.out.println(Arrays.toString(arr));
+	}
+}
+
 public class ArrayDemo {
   public static void main(String[] args) {
-  	String str = "want you to know one thing";
-	int countN = 0;
-	int countO = 0;
-	char[] charArray= str.toCharArray();
-  	for (char i:charArray){
-		if(i=='n'){
-			countN++;
-		}
-		if(i=='o'){
-			countO++;
-		}
-  	}
-
-	System.out.println("Number of 'n' in the string: " + countN);
-	System.out.println("Number of 'o' in the string: " + countO);
-  	
+  	Array arr = new Array(5);
+  	System.out.println(arr.insert(10));
+	System.out.println(arr.insert(20));
+	System.out.println(arr.insert(31));
+	arr.extend(3);
+	System.out.println(arr.insert(11));
+	System.out.println(arr.insert(9));
+	System.out.println(arr.insert(18));
+	System.out.println(arr.insert(23));
+	arr.display();
   }   
 }
