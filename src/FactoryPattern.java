@@ -1,24 +1,24 @@
 // Factory design pattern is used to create objects of different classes without exposing the creation logic to the client.
-interface Shape {
+interface IShape {
     void draw();
 }
 
 //define class Circle
-class Circle implements Shape{
+class Circle implements IShape{
     public void draw(){
         System.out.println("Draw a circle");
     }
 }
 
 //define class Rectangle
-class Rectangle implements Shape{
+class Rectangle implements IShape{
     public void draw(){
         System.out.println("Draw a rectangle");
     }
 }
 
 //define class Square
-class Square implements Shape{
+class Square implements IShape{
     public void draw(){
         System.out.println("Draw a square");
     }
@@ -26,7 +26,7 @@ class Square implements Shape{
 
 //define class ShapeFactory
 class ShapeFactory {
-    public Shape getShape(String shapeType){
+    public IShape getShape(String shapeType){
         if(shapeType.equalsIgnoreCase("circle")){
             return new Circle();
         }else if(shapeType.equalsIgnoreCase("rectangle")){
@@ -50,7 +50,7 @@ public class FactoryPattern {
         square.draw();*/
 
         //Using command line arguments to create shape objects
-        Shape myShape = shapeFactory.getShape(args[0]);
+        IShape myShape = shapeFactory.getShape(args[0]);
         myShape.draw();
 
     }
