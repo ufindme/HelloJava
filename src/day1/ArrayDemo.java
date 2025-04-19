@@ -1,4 +1,7 @@
+package day1;
+
 import java.util.Arrays;
+
 class Array{
 	int[] arr;
 	int index = 0;
@@ -40,6 +43,7 @@ class ArrayOrder extends Array{
 		Arrays.sort(arr);
 	}
 }
+
 class ReverseArray extends Array{
 	public ReverseArray(int size){
 		super(size);
